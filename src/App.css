@@ -12,6 +12,15 @@
 .tnt{
   color: rgb(57, 163, 212);
 }
+.mainContainer{
+  border: solid blue;
+  height: 522px;
+}
+.subContainer{
+  border: solid red;
+  height: 280px;
+
+}
 
 *, *:before, *:after {
   box-sizing: border-box;
