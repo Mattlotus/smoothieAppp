@@ -1,12 +1,16 @@
 :root {
   --white: #FFFFFF;
-  --tan-1: #FBF9F6;
+  --tan-1: #33cae9;
   --tan-2: #E7E2DD;
-  --tan-3: #E2D9D1;
-  --tan-4: #D3C1AE;
-  --orange: #f1171e;
-  --text-light: #a38266;
-  --text-dark: #615954;
+  --tan-3: #ffffff;
+  --tan-4: #dfddda;
+  --orange: #e9232a;
+  --text-light: #ffffff;
+  --text-dark: #cf2020;
+}
+
+.tnt{
+  color: rgb(57, 163, 212);
 }
 
 *, *:before, *:after {
