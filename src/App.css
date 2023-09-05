@@ -34,7 +34,7 @@
   justify-content: space-between;
 }
 .smoothiePic{
-  width: 80%;
+  width: 50%;
   height: 92%;
 }
 .OH{
@@ -51,6 +51,29 @@
   color: rgb(225, 38, 38);
   font-weight: bold;
 
+}
+.drinkContainer{
+  border: solid blue;
+  display: flex;
+  height: 333px;
+  justify-content: space-evenly;
+  margin-top: 92px;
+
+}
+.drinks{
+  /* border: solid blue; */
+  width: 50%;
+}
+.price{
+  border: solid red;
+  
+}
+.explosive{
+  border: solid blue;
+  margin-top: 22px;
+}
+.indexTitle{
+  color: rgb(7, 193, 218);
 }
 *, *:before, *:after {
   box-sizing: border-box;
