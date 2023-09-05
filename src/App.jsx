@@ -2,13 +2,16 @@ import { useState } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import { getUser } from './utilities/users-service';
 // pages
+import Index from './pages/IndexPage/IndexPage';
 import AuthPage from './pages/AuthPage/AuthPage';
 import NewOrderPage from './pages/NewOrderPage/NewOrderPage';
 import OrderHistoryPage from './pages/OrderHistoryPage/OrderHistoryPage';
+
 // components
 import NavBar from './components/NavBar/NavBar';
 // css
 import './App.css';
+
 
 function App() {
   // array destructuring
@@ -20,6 +23,7 @@ function App() {
         <>
           <NavBar user={user} setUser={setUser} />
           <Routes>
+            <Route path='/' element={<Index smoothies={[1]} />} />
             <Route path='/orders/new' element={<NewOrderPage />} />
             <Route path='/orders' element={<OrderHistoryPage />} />
           </Routes>

@@ -21,7 +21,37 @@
   height: 280px;
 
 }
+.form{
+  border: solid red;
+  width:422px;
+  margin-left: 100px;
+  
+}
 
+.nav{
+  /* border: solid blue; */
+  display: flex;
+  justify-content: space-between;
+}
+.smoothiePic{
+  width: 80%;
+  height: 92%;
+}
+.OH{
+  /* border: solid blue; */
+  color: rgb(225, 38, 38);
+  font-weight: bold;
+}
+.NO{
+  /* border: solid blue; */
+  color: rgb(225, 38, 38);
+  font-weight: bold;
+}
+.LO{
+  color: rgb(225, 38, 38);
+  font-weight: bold;
+
+}
 *, *:before, *:after {
   box-sizing: border-box;
 }

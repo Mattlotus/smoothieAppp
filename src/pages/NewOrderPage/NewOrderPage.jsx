@@ -17,20 +17,49 @@
 
 
 
-
+import axios from 'axios'
 import React from 'react'
+import { Link } from 'react-router-dom';
+import { useState } from 'react';
 
 function New() {
+ const [formData,setFormData]= useState({})
+  const handleClick = async () =>{
+    const smoothies = await axios.get('/')
+    console.log(smoothies)
+  }
+  const handleSubmit = async (e) =>{
+    e.preventDefault()
+    
+    try {
+      const addSmoothie = await axios.post('/smoothies',formData)
+    console.log(addSmoothie)
+    } catch (error) {
+      console.error(error)
+    }
+  } 
+
+  const handleChange = (e)=>{
+      setFormData({
+        ...formData,
+        [e.target.name]:e.target.value
+      })
+       console.log(formData)
+
+  }
   return (
     <div>
-        <a href='/'>Return to Index</a>
+      
+        <a href='/' onClick={handleClick}>Return to Index</a>
+        <Link to='/' onClick={handleClick}>Return to Index</Link>
         <h1>Create a NEW Smoothie</h1>
-      <form action='/newsubmit' method='POST' >
-        Ingredients: <input type='text' name='name'/>
+      <form onSubmit={handleSubmit} className='form'>
+        New Smoothie: <input type='text' name='name' value={formData.name || ''} onChange={handleChange}/>
+
         <br />
-        Profile Picture: <input type='src' name='img' />
+        Picture: <input type='src' name='img' value={formData.img || ''} onChange={handleChange} />
         <p />
-        <input type='submit' name='' value='submit' />
+        <input type='submit'  value='submit'  />
       </form>
     </div>
   )

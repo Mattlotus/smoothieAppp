@@ -4,16 +4,16 @@ const express = require('express');
 const path = require('path');
 const favicon = require('serve-favicon');
 const logger = require('morgan');
-const ingredients = require('./models/ingredients')
-const ingredientSchema = require('./models/ingredientSchema')
+// const smoothie = require('./models/smoothies')
+const Smoothie = require('./models/SmoothieSchema')
 
+// const newsubmit = require('')
 
 const app = express();
 // 
 
 app.use(logger('dev'));
 app.use(express.json());
-
 // Configure both serve-favicon & static middleware
 // to serve from the production 'build' folder
 app.use(favicon(path.join(__dirname, 'build', 'favicon.ico')));
@@ -22,18 +22,28 @@ app.use(require('./config/checkToken'));
 
 // Put API routes here, before the "catch all" route
 app.use('/api/users', require('./routes/api/users'));
-
+app.use('/smoothies', require('./routes/smoothies/smoothies'))
+app.post('/new', async(req,res)=>{
+  // res.(new)
+  await Smoothie.create(req.body)
+  res.redirect('/')
+})
 // The following "catch all" route (note the *) is necessary
 // to return the index.html on all non-AJAX requests
-app.get('/*', function (req, res) {
-  res.sendFile(path.join(__dirname, 'build', 'index.html'));
-});
+// app.get('/*', function (req, res) {
+//   res.sendFile(path.join(__dirname, 'build', 'index.html'));
+// });
 
 // post firebase
  const {fireBaseSignUp , fireBaseLogin} = require('./controllers/firebase')
  app.post('/signUp',fireBaseSignUp)
  app.post('/login', fireBaseLogin)
- 
+
+//  routes
+
+app.get('/*', function (req, res) {
+  res.sendFile(path.join(__dirname, 'build', 'index.html'));
+});
 
 
 // Configure to use port 3001 instead of 3000 during
