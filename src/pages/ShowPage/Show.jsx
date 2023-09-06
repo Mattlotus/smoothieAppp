@@ -3,7 +3,7 @@ import React from 'react'
 function Show(props) {
   return (
     <div>
-        {/* this will show the specified pokemon that was clicked on */}
+        {/* this will show the specified smoothies that was clicked on */}
         <h1>This is my Show Page!</h1>
         <img src={props.smoothies.img} />
         <br />

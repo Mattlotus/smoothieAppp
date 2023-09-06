@@ -54,6 +54,7 @@ function IndexPage(props) {
   useEffect(()=>{
     const getSmoothies = async ()=>{
       const allSmoothies = await smoothieApi.getSmoothies()
+      setSmoothies(allSmoothies)
     }
     getSmoothies()
   },[])
@@ -76,23 +77,23 @@ function IndexPage(props) {
                 <div className='drinkContainer'>
                  <div className='price'>
                   <img src="https://www.acouplecooks.com/wp-content/uploads/2020/05/Berry-Smoothie-011.jpg" alt="" className='drinks'/>
-                  <button>select</button>
+                  <button>BerryBlast</button>
                   </div>
 
 
                   <div className='price'>
                   <img src="https://choosingchia.com/jessh-jessh/uploads/2021/05/Simple-green-smoothie-1-2.jpg" alt="" className='drinks' />
-                  <button>select</button>
+                  <button>Green Fuel</button>
                   </div>
 
                   <div className='price'>
                   <img src="https://media.bluediamond.com/uploads/2023/01/24174515/Mango_Date_Smoothies_Photo.jpg" alt="" className='drinks' />
-                  <button>select</button>
+                  <button>Mango Tango</button>
                   </div>
 
                   <div className='price'>
                   <img src="https://www.eatingbirdfood.com/wp-content/uploads/2023/02/dragon-fruit-smoothie-hero-cropped.jpg" alt="" className='drinks' />
-                  <button>select</button>
+                  <button>Dragon</button>
                   </div>
                 </div>
             </div>

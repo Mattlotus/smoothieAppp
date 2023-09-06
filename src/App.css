@@ -24,7 +24,7 @@
 .form{
   border: solid red;
   width:422px;
-  margin-left: 100px;
+  margin-left: 400px;
   
 }
 
@@ -53,7 +53,7 @@
 
 }
 .drinkContainer{
-  border: solid blue;
+  /* border: solid blue; */
   display: flex;
   height: 333px;
   justify-content: space-evenly;
@@ -65,12 +65,11 @@
   width: 50%;
 }
 .price{
-  border: solid red;
+  /* border: solid red; */
   
 }
 .explosive{
   border: solid blue;
-  margin-top: 22px;
 }
 .indexTitle{
   color: rgb(7, 193, 218);

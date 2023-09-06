@@ -1,7 +1,7 @@
 const mongoose = require("mongoose")
 
 const SmoothieSchema = new mongoose.Schema({
-    name: {
+    title: {
         type: String,
         required: true
     },
@@ -9,6 +9,7 @@ const SmoothieSchema = new mongoose.Schema({
         type: String,
         required: true
     },
+    
 })
 
 const Smoothie = mongoose.model( 'Smoothie', SmoothieSchema )
