@@ -85,8 +85,10 @@ const New = () =>{
   })
    const navigate = useNavigate()
    const [smoothies,setSmoothies]=useState([])
+   const [count,setCount]=useState(0)
  
   const handleChange = (e)=>{
+
     setSmoothie(prev=>({...prev, [e.target.name]: e.target.value}))
   }
 
@@ -110,9 +112,16 @@ const New = () =>{
       setSmoothies(allSmoothies)
     }
     getSmoothies()
-  },[])
-      const vanish = async (e) =>{
+  },[count])
+      const vanish = async (e, id) =>{
         e.preventDefault() 
+        try {
+          await axios.delete(`/smoothies/${id}`)
+          setCount(prev=>prev+1)
+        } catch (error) {
+          console.error(error)
+          
+        }
       
 
       }
@@ -131,7 +140,7 @@ const New = () =>{
           <div>
               <h3>{s.title} </h3>
               <img src={s.img} alt="" />
-              <button onClick={vanish}>delete</button>
+              <button onClick={(e)=>{vanish(e , s._id)}}>delete</button>
           </div>
        )
         

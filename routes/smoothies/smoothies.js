@@ -14,5 +14,18 @@ router.post('/', async (req,res)=>{
 console.log(addedSmoothie)
 })
 
+router.delete('/:id', async (req,res)=>{
+ 
+  try {
+    await Smoothies.findByIdAndDelete(req.params.id)
+    res.send('item deleted')
+    
+  } catch (error) {
+    res.status(400).json({msg: error.message})
+    
+  }
+
+})
+
 
 module.exports = router
