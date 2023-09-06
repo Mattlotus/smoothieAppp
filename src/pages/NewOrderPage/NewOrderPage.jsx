@@ -71,12 +71,13 @@
 import axios from 'axios'
 import React, { useEffect } from 'react'
 import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import * as smoothieApi from '../../utilities/smoothieApi'
 
 
 
-const New = () =>{
+
+const New = ({setActive}) =>{
   const [smoothie,setSmoothie] = useState({
     title:"",
     desc:"",
@@ -125,13 +126,16 @@ const New = () =>{
       
 
       }
-
-      const updateSmoothie = ()=>{
+      const toEdit = (smoothie)=>{
+        setActive(smoothie)
+        navigate(`/update/${smoothie._id}`)
+        
 
       }
+      
   return (
     <div className='forms'>
-      <h1>Add New Smoothie</h1>
+      <h1 className='indexTitle'>Add New Smoothie</h1>
       <input type="text" placeholder='title' onChange={handleChange} name='title' />
       <input type="text" placeholder='desc' onChange={handleChange}name='description' />
       <input type="number" placeholder='price' onChange={handleChange}name="price"/>
@@ -145,7 +149,7 @@ const New = () =>{
               <h3>{s.title} </h3>
               <img src={s.img} alt="" />
               <button onClick={(e)=>{vanish(e , s._id)}}>delete</button>
-              <button onclick={updateSmoothie}>Update</button>
+              <button className='update' onClick={()=>{toEdit(s)}}>edit</button>
           </div>
        )
         

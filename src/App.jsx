@@ -6,6 +6,7 @@ import Index from './pages/IndexPage/IndexPage';
 import AuthPage from './pages/AuthPage/AuthPage';
 import NewOrderPage from './pages/NewOrderPage/NewOrderPage';
 import OrderHistoryPage from './pages/OrderHistoryPage/OrderHistoryPage';
+import UpdatePage from './pages/UpdatePage/UpdatePage'
 
 // components
 import NavBar from './components/NavBar/NavBar';
@@ -17,6 +18,8 @@ function App() {
   // array destructuring
   const [user, setUser] = useState(getUser());
 
+  const[active,setActive]=useState({})
+
   return (
     <main className='App'>
       {user ? (
@@ -24,8 +27,9 @@ function App() {
           <NavBar user={user} setUser={setUser} />
           <Routes>
             <Route path='/' element={<Index smoothies={[1]} />} />
-            <Route path='/orders/new' element={<NewOrderPage />} />
+            <Route path='/orders/new' element={<NewOrderPage setActive={setActive}/>} />
             <Route path='/orders' element={<OrderHistoryPage />} />
+            <Route path='/update/:_id' element={<UpdatePage active={active} setActive={setActive} />} />
           </Routes>
         </>
       ) : (

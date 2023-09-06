@@ -27,5 +27,22 @@ router.delete('/:id', async (req,res)=>{
 
 })
 
+router.put('/update/:id',async (req,res)=>{
+  
+  
+
+  try {
+    const updateSmoothie = await Smoothies.findByIdAndUpdate(req.params.id,req.body)
+    res.json(updateSmoothie)
+    
+    
+  } catch (error) {
+    res.status(400).json({msg: error.message})
+    
+  }
+  
+})
+
+
 
 module.exports = router

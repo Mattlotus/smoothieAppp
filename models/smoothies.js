@@ -6,24 +6,24 @@ const smoothies = [
     img: "https://w7.pngwing.com/pngs/102/28/png-transparent-strawberry-juice-fruit-smoothie-strawberry-fruit-natural-foods-frutti-di-bosco-food-thumbnail.png"},
 
     {name: "khaleesy dragon", 
-    img: "http://img.pokemondb.net/artwork/ivysaur",
+    img: "https://littlesunnykitchen.com/wp-content/uploads/2022/07/Berry-Smoothie-1.jpg",
     description:"strawberry,banana,mango,dragonfruit,honey,seamoss,protein powder"},
 
     {name: "miami beach", 
-    img: "http://img.pokemondb.net/artwork/venusaur"
+    img: "https://www.blessthismessplease.com/wp-content/uploads/2022/06/tropical-smoothie-recipe-5.jpg"
     },
 
-    {name: "kid special", 
-    img: "http://img.pokemondb.net/artwork/charmander"},
+    {name: "sunlight", 
+    img: "https://cookingformysoul.com/wp-content/uploads/2022/05/triple-berry-smoothie-feat-min.jpg"},
 
     {name: "green machine", 
-    img: "http://img.pokemondb.net/artwork/charizard"},
+    img: "https://www.budgetbytes.com/wp-content/uploads/2023/02/GreenSmoothieside.jpg"},
 
-    {name: "peanutbutter ", 
-    img: "http://img.pokemondb.net/artwork/squirtle"},
+    {name: "peanut butter ", 
+    img: "https://www.wellplated.com/wp-content/uploads/2020/12/Peanut-Butter-Banana-Smoothie-recipe.jpg"},
 
-    {name: "random", 
-    img: "http://img.pokemondb.net/artwork/wartortle"}
+    {name: "tropic thunder", 
+    img: "https://www.dinneratthezoo.com/wp-content/uploads/2018/05/frozen-fruit-smoothie-3.jpg"}
 ];
 (
     async function(){
