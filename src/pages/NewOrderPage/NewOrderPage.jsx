@@ -125,6 +125,10 @@ const New = () =>{
       
 
       }
+
+      const updateSmoothie = ()=>{
+
+      }
   return (
     <div className='forms'>
       <h1>Add New Smoothie</h1>
@@ -141,6 +145,7 @@ const New = () =>{
               <h3>{s.title} </h3>
               <img src={s.img} alt="" />
               <button onClick={(e)=>{vanish(e , s._id)}}>delete</button>
+              <button onclick={updateSmoothie}>Update</button>
           </div>
        )
         
