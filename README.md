@@ -13,4 +13,10 @@ github
 thunder client
 mongoose
 bcrypt
+VScode
+
+
+#Future Enhancements
+Better CSS
+More features
 
