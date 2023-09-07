@@ -99,7 +99,7 @@ function IndexPage(props) {
             </div>
         )
       }):
-      <h1>wwwww</h1>
+      <h1>W</h1>
       }
 
     </div>
