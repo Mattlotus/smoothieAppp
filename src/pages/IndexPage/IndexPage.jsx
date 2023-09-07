@@ -60,7 +60,7 @@ function IndexPage(props) {
   },[])
   return (
     <div>
-      <h1 className='indexTitle'>Welcome to TNT Smooothies index</h1>
+      <h1 className='indexTitle'>Welcome to TNT Smooothies</h1>
       {props.smoothies ?
       props.smoothies.map((smoothie, i )=>{
         return(
