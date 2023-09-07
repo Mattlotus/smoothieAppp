@@ -6,8 +6,11 @@ React
 express
 nodemon
 java script
+api
 CSS
 MongoDB
 github
 thunder client
+mongoose
+bcrypt
 
