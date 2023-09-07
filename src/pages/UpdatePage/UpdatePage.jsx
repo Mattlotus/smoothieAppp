@@ -27,7 +27,7 @@ import { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import * as smoothieApi from '../../utilities/smoothieApi'
 
-
+// make update function and state
 const Update = ({active , setActive}) =>{
   const [smoothie,setSmoothie] = useState({
     title:"",
@@ -38,12 +38,12 @@ const Update = ({active , setActive}) =>{
    const navigate = useNavigate()
    const [smoothies,setSmoothies]=useState([])
    const [count,setCount]=useState(0)
- 
+//  handlechange function 
   const handleChange = (e)=>{
 
     setActive(prev=>({...prev, [e.target.name]: e.target.value}))
   }
-
+//  control one smoothie
   const handleClick = async e =>{
     e.preventDefault()
     try {
