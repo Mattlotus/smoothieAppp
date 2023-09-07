@@ -6,4 +6,8 @@ React
 express
 nodemon
 java script
+CSS
+MongoDB
+github
+thunder client
 
