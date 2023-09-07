@@ -1,3 +1,2 @@
 # TNT SMOOTHIES APP
-
-Clone this repo to provide the starter code for a comprehensive MERN-Stack project including token-based authentication.
+This is a create your own smoothie app
